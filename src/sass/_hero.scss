@@ -1,0 +1,92 @@
+@use './colors_themes' as theme;
+@use './brand_colors' as *;
+
+.hero {
+    position: relative;
+    color: var(--scheme-text);
+    overflow: hidden;
+
+    &__head {
+        width: 100%;
+        height: 100vh;
+        background-image: url('/dist/img/herobg2.png');
+        background-size: cover;
+        background-position: 42% top;
+        z-index: 0;
+    }
+
+    &__shadow {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 14, 1, 0.75);
+        z-index: -2;
+    }
+
+    &__text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        padding: 2.6rem;
+        text-align: center;
+        font-size: 1.4rem;
+        z-index: 1;
+
+        &-heading {
+            margin: 0.5rem 0 2.6rem 0;
+            font-size: 3.5rem;
+            font-family: Fraunces, serif;
+        }
+    }
+
+    p {
+        line-height: 2.2rem;
+    }
+
+    &__btns {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    &__btn {
+        padding: 1.2rem 2rem;
+        border-radius: 20px;
+        transition: 0.3s ease;
+
+        &-booknow {
+            background-color: $light-green;
+            color: var(--scheme-background);
+        }
+
+        &-more {
+            border: solid 1px var(--scheme-border);
+            color: var(--scheme-text);
+
+            &:hover {
+                background-color: var(--scheme-border);
+            }
+        }
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .hero {
+        &__head {
+            height: calc(100vh - 72px);
+        }
+        &__text {
+            font-size: 2rem;
+            &-heading {
+                font-size: 4.5rem;
+            }
+        }
+    }
+}

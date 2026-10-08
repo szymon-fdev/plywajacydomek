@@ -1,0 +1,51 @@
+// Klasy testowe opierające się na Twoich zmiennych z _colors_themes.scss
+.test-section {
+    background-color: var(--scheme-background);
+    padding: 4rem 2rem;
+    font-family: sans-serif; // Zmień na swój font, jeśli masz już _typography.scss
+}
+
+.test-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.test-heading {
+    color: var(--scheme-heading);
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.test-text {
+    color: var(--scheme-text);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.test-text-muted {
+    color: var(--scheme-text-muted);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.test-card {
+    background-color: var(--scheme-background-secondary);
+    border: 1px solid var(--scheme-border);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.test-button {
+    background-color: var(--scheme-accent);
+    color: var(--scheme-background); // Używam tła głównego jako koloru tekstu na guziku dla kontrastu
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-block;
+    transition: opacity 0.2s;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
