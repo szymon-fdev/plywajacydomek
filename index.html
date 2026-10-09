@@ -11,7 +11,10 @@
     href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
     rel="stylesheet"
 />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" /><link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+/>
 <link rel="stylesheet" href="/dist/css/hamburger.min.css" />
 <link rel="stylesheet" href="/dist/css/main.min.css" />
 
@@ -227,15 +230,124 @@
     </ul>
 </section>
 
-            <section class="section houses theme-scheme-1">
+            <section class="section houses theme-scheme-2">
     <div class="container">
         <h2 class="section__heading">Nasze domki</h2>
         <p class="section__sub">Trzy domki - dwa pływające i jeden nad brzegiem jeziora. Wybierz ten, który Ci najbardziej pasuje.</p>
+        <!-- <p class="section__sub-info">Kliknij w zdjęcie, aby zobaczyć wnętrze obiektu.</p> -->
+
+        <!-- DOMEK 1: SOSNOWY -->
+        
+        
+        
+        
+        
+        
+        
+        <article class="cottage-card">
+    <!-- LEWA STRONA: Zdjęcie główne z ikoną -->
+    <div class="cottage-card__media">
+        <!-- Główne widoczne zdjęcie, które odpala galerię -->
+        <a href="./dist/img/balia2.png" class="cottage-card__cover glightbox" data-gallery="domek-sosnowy" data-title="Pływający domek (Alaska)">
+            <img src="./dist/img/balia2.png" alt="Pływający domek (Alaska)" class="cottage-card__img" />
+            <span class="cottage-card__badge">
+                <i class="bi bi-images"></i>
+            </span>
+        </a>
+        <p class="section__sub-info"><i class="bi bi-arrow-up-circle"></i> Kliknij w zdjęcie, aby zobaczyć wnętrze obiektu.</p>
+
+        <!-- Zdjęcia wnętrza (ukryte na stronie, pojawiają się w popupie) -->
+        <div style="display: none">
+            <a href="./dist/img/balia1.png" class="glightbox" data-gallery="domek-sosnowy" data-title="Pływający domek (Alaska)"></a>
+            <a href="./dist/img/balia.png" class="glightbox" data-gallery="domek-sosnowy" data-title="Pływający domek (Alaska)"></a>
+        </div>
+    </div>
+
+    <!-- PRAWA STRONA: Treść -->
+    <div class="cottage-card__content">
+        <h3 class="cottage-card__title">Pływający domek (Alaska)</h3>
+        <p class="cottage-card__desc">Przytulny, całoroczny domek z widokiem na jezioro. W środku kominek i aneks kuchenny.</p>
+        <a href="#rezerwacja-sosnowy" class="cottage-card__link"> Sprawdź dostępność <i class="bi bi-arrow-right"></i> </a>
+    </div>
+</article>
+
+
+        <!-- DOMEK 2: BRDA -->
+        
+        
+        
+        
+        
+        
+        
+        <article class="cottage-card">
+    <!-- LEWA STRONA: Zdjęcie główne z ikoną -->
+    <div class="cottage-card__media">
+        <!-- Główne widoczne zdjęcie, które odpala galerię -->
+        <a href="./dist/img/ogrod.jpeg" class="cottage-card__cover glightbox" data-gallery="domek-brda" data-title="Pływająca Brda">
+            <img src="./dist/img/ogrod.jpeg" alt="Pływająca Brda" class="cottage-card__img" />
+            <span class="cottage-card__badge">
+                <i class="bi bi-images"></i>
+            </span>
+        </a>
+        <p class="section__sub-info"><i class="bi bi-arrow-up-circle"></i> Kliknij w zdjęcie, aby zobaczyć wnętrze obiektu.</p>
+
+        <!-- Zdjęcia wnętrza (ukryte na stronie, pojawiają się w popupie) -->
+        <div style="display: none">
+            <a href="./dist/img/ogrod1.jpeg" class="glightbox" data-gallery="domek-brda" data-title="Pływająca Brda"></a>
+            <a href="./dist/img/ogrod2.png" class="glightbox" data-gallery="domek-brda" data-title="Pływająca Brda"></a>
+        </div>
+    </div>
+
+    <!-- PRAWA STRONA: Treść -->
+    <div class="cottage-card__content">
+        <h3 class="cottage-card__title">Pływająca Brda</h3>
+        <p class="cottage-card__desc">Niezwykły klimat na samej wodzie. Taras z bezpośrednim zejściem do jeziora.</p>
+        <a href="#rezerwacja-brda" class="cottage-card__link"> Sprawdź dostępność <i class="bi bi-arrow-right"></i> </a>
+    </div>
+</article>
+
+
+        <!-- DOMEK 3: STODOŁA -->
+        
+        
+        
+        
+        
+        
+        
+        <article class="cottage-card">
+    <!-- LEWA STRONA: Zdjęcie główne z ikoną -->
+    <div class="cottage-card__media">
+        <!-- Główne widoczne zdjęcie, które odpala galerię -->
+        <a href="./dist/img/szklarnia.jpeg" class="cottage-card__cover glightbox" data-gallery="szklana-stodola" data-title="Szklana Stodoła">
+            <img src="./dist/img/szklarnia.jpeg" alt="Szklana Stodoła" class="cottage-card__img" />
+            <span class="cottage-card__badge">
+                <i class="bi bi-images"></i>
+            </span>
+        </a>
+        <p class="section__sub-info"><i class="bi bi-arrow-up-circle"></i> Kliknij w zdjęcie, aby zobaczyć wnętrze obiektu.</p>
+
+        <!-- Zdjęcia wnętrza (ukryte na stronie, pojawiają się w popupie) -->
+        <div style="display: none">
+            <a href="./dist/img/szklarnia1.webp" class="glightbox" data-gallery="szklana-stodola" data-title="Szklana Stodoła"></a>
+            <a href="./dist/img/szklarnia2.webp" class="glightbox" data-gallery="szklana-stodola" data-title="Szklana Stodoła"></a>
+        </div>
+    </div>
+
+    <!-- PRAWA STRONA: Treść -->
+    <div class="cottage-card__content">
+        <h3 class="cottage-card__title">Szklana Stodoła</h3>
+        <p class="cottage-card__desc">Nowoczesny design, ogromne przeszklenia i widok na las prosto z łóżka.</p>
+        <a href="#rezerwacja-stodola" class="cottage-card__link"> Sprawdź dostępność <i class="bi bi-arrow-right"></i> </a>
+    </div>
+</article>
+
     </div>
 </section>
 
         </main>
-
         <script src="/dist/js/main.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
     </body>
 </html>

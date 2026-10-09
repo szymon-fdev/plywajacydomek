@@ -7,7 +7,7 @@
     color: var(--scheme-text);
 
     &__heading {
-        margin-bottom: 2rem;
+        margin-bottom: 2.5rem;
         font-family: Fraunces, serif;
         font-weight: 500;
         font-size: 3.2rem;
@@ -18,9 +18,16 @@
     &__sub {
         margin-bottom: 2rem;
         font-family: Figtree, sans-serif;
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         text-align: center;
-
+        color: var(--scheme-text);
+        &-info {
+            text-align: center;
+            margin-top: 1.3rem;
+            font-family: Figtree, sans-serif;
+            font-size: 1.5rem;
+            color: var(--scheme-text-muted);
+        }
     }
 }
 

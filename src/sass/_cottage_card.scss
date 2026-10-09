@@ -1,0 +1,123 @@
+@use './colors_themes' as theme;
+@use './brand_colors' as *;
+
+.cottage-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    &__media {
+        width: 100%;
+        min-width: 0;
+    }
+
+    &__cover {
+        position: relative;
+        display: block;
+        width: 100%;
+        border-radius: 28px;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    &__img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.35s ease;
+
+        .cottage-card__cover:hover & {
+            transform: scale(1.03);
+        }
+    }
+
+    &__badge {
+        position: absolute;
+        top: 1.25rem;
+        right: 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        background: rgba(0, 0, 0, 0.55);
+        color: #fff;
+        border-radius: 50%;
+        font-size: 1.8rem;
+        backdrop-filter: blur(4px);
+        transition: background 0.2s ease;
+
+        .cottage-card__cover:hover & {
+            background: rgba(0, 0, 0, 0.8);
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__title {
+        margin: 0 0 1.25rem 0;
+        font-family: Fraunces, serif;
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: var(--scheme-heading);
+        line-height: 1.2;
+    }
+
+    &__desc {
+        margin: 0 0 2rem 0;
+        font-size: 1.6rem;
+        line-height: 1.6;
+        color: var(--scheme-text);
+        max-width: 520px;
+    }
+
+    &__link {
+        display: inline-block;
+        padding: 1rem 2rem;
+        color: var(--scheme-text);
+        font-size: 1.4rem;
+        font-weight: 600;
+        text-decoration: none;
+        border: solid 1px var(--scheme-border);
+        border-radius: 20px;
+        transition:0.2s ease;
+
+        &:hover {
+            background-color: var(--scheme-text);
+            color: var(--scheme-background);
+
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .cottage-card {
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        align-items: center;
+
+        &__badge {
+            top: 1.5rem;
+            right: 1.5rem;
+            height: 50px;
+            width: 50px;
+        }
+
+        &__title {
+            font-size: 3rem;
+        }
+
+        &__desc {
+            font-size: 1.8rem;
+        }
+
+        &__link {
+            font-size: 1.5rem;
+        }
+    }
+}

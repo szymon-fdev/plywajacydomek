@@ -29,6 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     initSliders();
 
+    const lightbox = GLightbox({
+        selector: '.glightbox',
+        touchNavigation: true, // przewijanie palcem na telefonie
+        loop: true, // zapętlanie slajdów
+    });
     //nav
     const hamburger = document.getElementById('mobile-btn');
     const navMenu = document.getElementById('nav-menu');

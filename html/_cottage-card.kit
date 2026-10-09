@@ -1,0 +1,26 @@
+<article class="cottage-card">
+    <!-- LEWA STRONA: Zdjęcie główne z ikoną -->
+    <div class="cottage-card__media">
+        <!-- Główne widoczne zdjęcie, które odpala galerię -->
+        <a href="<!-- $img1 -->" class="cottage-card__cover glightbox" data-gallery="<!-- $id -->" data-title="<!-- $title -->">
+            <img src="<!-- $img1 -->" alt="<!-- $title -->" class="cottage-card__img" />
+            <span class="cottage-card__badge">
+                <i class="bi bi-images"></i>
+            </span>
+        </a>
+        <p class="section__sub-info"><i class="bi bi-arrow-up-circle"></i> Kliknij w zdjęcie, aby zobaczyć wnętrze obiektu.</p>
+
+        <!-- Zdjęcia wnętrza (ukryte na stronie, pojawiają się w popupie) -->
+        <div style="display: none">
+            <a href="<!-- $img2 -->" class="glightbox" data-gallery="<!-- $id -->" data-title="<!-- $title -->"></a>
+            <a href="<!-- $img3 -->" class="glightbox" data-gallery="<!-- $id -->" data-title="<!-- $title -->"></a>
+        </div>
+    </div>
+
+    <!-- PRAWA STRONA: Treść -->
+    <div class="cottage-card__content">
+        <h3 class="cottage-card__title"><!-- $title --></h3>
+        <p class="cottage-card__desc"><!-- $desc --></p>
+        <a href="<!-- $link -->" class="cottage-card__link"> Sprawdź dostępność <i class="bi bi-arrow-right"></i> </a>
+    </div>
+</article>
