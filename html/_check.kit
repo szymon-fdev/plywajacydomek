@@ -1,0 +1,40 @@
+<section class="section booking-bar theme-scheme-3">
+    <div class="booking-bar__container">
+        <h2 class="section__heading">Sprawdź dostępne terminy</h2>
+        <form class="booking-bar__form" id="booking-form">
+            <div class="booking-bar__group">
+                <label for="object-select" class="booking-bar__label">Domek</label>
+                <select id="object-select" class="booking-bar__input" required>
+                    <option value="" disabled selected>Wybierz domek...</option>
+                    <option value="alaska">Pływający Domek (Alaska) - maks. 2 os.</option>
+                    <option value="brda">Pływająca Brda - maks. 4 os.</option>
+                    <option value="stodola">Szklana stodoła - maks. 6 os.</option>
+                </select>
+            </div>
+
+            <div class="booking-bar__group">
+                <label for="checkin" class="booking-bar__label">Przyjazd</label>
+                <input type="date" id="checkin" class="booking-bar__input" required />
+            </div>
+
+            <div class="booking-bar__group">
+                <label for="checkout" class="booking-bar__label">Wyjazd</label>
+                <input type="date" id="checkout" class="booking-bar__input" required />
+            </div>
+
+            <div class="booking-bar__group">
+                <label for="guests" class="booking-bar__label">Osoby</label>
+                <input type="number" id="guests" class="booking-bar__input" min="1" max="8" value="2" required />
+            </div>
+
+            <div class="booking-bar__action">
+                <a href="#" id="booking-link" class="button button--disabled" target="_blank" rel="noopener noreferrer">Sprawdź dostepność</a>
+            </div>
+        </form>
+        <p class="booking-bar__info">
+            <i class="bi bi-lightbulb"></i> Wskazówka: Rezerwując bezpośrednio przez
+            <a href="mailto:plywajacydomek@gmail.com" class="booking-bar__info-link" target="_blank" rel="noopener noreferrer">e-mail</a> lub nasz profil na <a href="https://www.facebook.com/plywajacydomek" class="booking-bar__info-link" target="_blank" rel="noopener noreferrer">Facebooku</a>,
+            zawsze otrzymujesz najkorzystniejszą cenę.
+        </p>
+    </div>
+</section>

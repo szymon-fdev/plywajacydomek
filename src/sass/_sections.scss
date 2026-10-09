@@ -1,0 +1,38 @@
+@use './colors_themes' as theme;
+@use './brand_colors' as *;
+
+.section {
+    padding: 4.6rem 2.4rem;
+    background-color: var(--scheme-background);
+    color: var(--scheme-text);
+
+    &__heading {
+        margin-bottom: 2rem;
+        font-family: Fraunces, serif;
+        font-weight: 500;
+        font-size: 3.2rem;
+        text-align: center;
+        color: var(--scheme-heading);
+    }
+
+    &__sub {
+        margin-bottom: 2rem;
+        font-family: Figtree, sans-serif;
+        font-size: 1.5rem;
+        text-align: center;
+
+    }
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+    .section {
+        &__heading {
+            font-size: 4.2rem;
+        }
+    }
+}
