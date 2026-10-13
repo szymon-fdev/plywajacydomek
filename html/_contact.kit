@@ -1,0 +1,97 @@
+<section class="contact section theme-scheme-2" id="contact-section">
+    <div class="container">
+        <div class="contact__grid">
+            <div class="contact__content">
+                <header class="contact__header">
+                    <h2 class="section__heading contact__title">Kontakt i lokalizacja</h2>
+                    <p class="section__sub contact__desc">
+                        Masz pytanie przed rezerwacją? Zadzwoń albo napisz - odpowiadamy najszybciej, jak możemy.
+                    </p>
+                </header>
+
+                <div class="contact__socials">
+                    <a href="https://www.facebook.com/plywajacydomek" class="contact__social-link" target="_blank" rel="noopener"
+                        ><strong><i class="bi bi-facebook"></i> Facebook</strong></a
+                    >
+                    <a href="https://www.instagram.com/plywajacydomek/" class="contact__social-link" target="_blank" rel="noopener"
+                        ><strong><i class="bi bi-instagram"></i> Instagram</strong></a
+                    >
+                </div>
+                <div class="contact__info">
+                    <div class="contact__info-item">
+                        <i class="bi bi-telephone contact__info-icon"></i>
+                        <div class="contact__info-text">
+                            <span class="contact__info-label">Telefon</span>
+                            <a href="tel:+48737480857" class="contact__info-value">+48 737 480 857</a>
+                        </div>
+                    </div>
+
+                    <div class="contact__info-item">
+                        <i class="bi bi-envelope contact__info-icon"></i>
+                        <div class="contact__info-text">
+                            <span class="contact__info-label">E-mail</span>
+                            <a href="mailto:plywajacydomek@gmail.com" class="contact__info-value">plywajacydomek@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact__info-item">
+                        <i class="bi bi-geo-alt contact__info-icon"></i>
+                        <div class="contact__info-text">
+                            <span class="contact__info-label">Adres</span>
+                            <a href="https://maps.app.goo.gl/FbKcWPBCkBjHeSFq9" class="contact__info-value" target="_blank" rel="noopener"
+                                >Wczasowa 11, 83-047 Przywidz</a
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact__form" id="contact-form">
+                    <div class="contact__form-group">
+                        <label for="contact-name" class="contact__form-label">Imię i nazwisko *</label>
+                        <input type="text" id="contact-name" name="name" class="contact__form-input" placeholder="Imię i nazwisko" required />
+                    </div>
+
+                    <div class="contact__form-group">
+                        <label for="contact-email" class="contact__form-label">E-mail *</label>
+                        <input type="email" id="contact-email" name="email" class="contact__form-input" placeholder="twoj@email.pl" required />
+                    </div>
+
+                    <div class="contact__form-group">
+                        <label for="contact-subject" class="contact__form-label">Temat *</label>
+                        <div class="contact__form-select-wrapper">
+                            <select id="contact-subject" name="subject" class="contact__form-select" required>
+                                <option value="rezerwacja">Rezerwacja</option>
+                                <option value="pytanie">Pytanie ogólne</option>
+                                <option value="inne">Inne</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="contact__form-group">
+                        <label for="contact-message" class="contact__form-label">Wiadomość *</label>
+                        <textarea
+                            id="contact-message"
+                            name="message"
+                            class="contact__form-textarea"
+                            rows="4"
+                            placeholder="W czym możemy pomóc?"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="contact__form-btn">Wyślij wiadomość</button>
+                </form>
+            </div>
+
+            <div class="contact__map-wrapper">
+                <iframe
+                    class="contact__map-img"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2334.2415235171243!2d18.32413161299706!3d54.19350747243266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd823dd0b4503d%3A0x32122555ebbc4312!2sWczasowa%2011%2C%2083-047%20Przywidz!5e0!3m2!1spl!2spl!4v1791925070013!5m2!1spl!2spl"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                ></iframe>
+            </div>
+        </div>
+    </div>
+</section>

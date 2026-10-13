@@ -1,0 +1,149 @@
+@use './colors_themes' as theme;
+@use './brand_colors' as *;
+
+.testimonials {
+    overflow: hidden;
+    width: 100%;
+    .section {
+        &__heading {
+            text-align: left;
+        }
+    }
+    &__track {
+        display: flex;
+        gap: 1.5rem;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 0.5rem;
+
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        @media (min-width: 1024px) {
+            gap: 2.5rem;
+        }
+    }
+
+    &__card {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__stars {
+        margin-bottom: 1.25rem;
+        display: flex;
+        gap: 0.5rem;
+        color: var(--scheme-accent);
+        font-size: 1.4rem;
+    }
+
+    &__text {
+        margin: 0 0 1rem 0;
+        line-height: 1.6;
+        font-size: 1.3rem;
+    }
+
+    &__author {
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    &__name {
+        font-size: 1.4rem;
+    }
+
+    &__source {
+        font-size: 1.2rem;
+    }
+
+    &__controls {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 2.5rem;
+    }
+
+    &__dots {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    &__dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        background-color: var(--scheme-accent-subtle);
+        transition:
+            background-color 0.2s ease,
+            transform 0.2s ease;
+
+        &--active {
+            background-color: var(--scheme-accent);
+            transform: scale(1.2);
+        }
+    }
+
+    &__arrows {
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__arrow {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 4rem;
+        height: 4rem;
+        font-size: 2rem;
+        color: var(--scheme-text);
+        border-radius: 50%;
+        border: 1px solid var(--scheme-border);
+        background: transparent;
+        cursor: pointer;
+        transition:
+            opacity 0.2s ease,
+            background-color 0.2s ease;
+
+        &:hover {
+            opacity: 0.8;
+            background-color: var(--scheme-border);
+        }
+    }
+}
+
+@media (min-width: 640px) {
+    .testimonials {
+        &__card {
+            flex: 0 0 calc((100% - 1.5rem) / 2);
+        }
+
+        &__dot {
+            &:nth-child(n + 5) {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .testimonials {
+        &__card {
+            flex: 0 0 calc((100% - 5rem) / 3);
+        }
+
+        &__dot {
+            &:nth-child(n + 4) {
+                display: none;
+            }
+        }
+    }
+}

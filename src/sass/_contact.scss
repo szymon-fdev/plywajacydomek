@@ -1,0 +1,254 @@
+@use './colors_themes' as theme;
+@use './brand_colors' as *;
+
+.contact {
+    &__grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3.5rem;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    // --- Nagłówek ---
+    &__header {
+        margin-bottom: 2rem;
+    }
+
+    &__title {
+        margin: 0 0 0.75rem 0;
+        text-align: left;
+    }
+
+    &__desc {
+        margin-bottom: 0;
+        text-align: left;
+        font-size: 1.4rem;
+        opacity: 0.85;
+    }
+
+    // --- Dane kontaktowe ---
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    &__info-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.85rem;
+    }
+
+    &__info-icon {
+        font-size: 1.4rem;
+        line-height: 1.4;
+        color: var(--scheme-text-muted);
+        opacity: 0.75;
+    }
+
+    &__info-text {
+        display: flex;
+        flex-direction: column;
+        gap: 0.15rem;
+        font-size: 1.5rem;
+    }
+
+    &__info-label {
+        color: var(--scheme-text-muted);
+        opacity: 0.8;
+    }
+
+    &__info-value {
+        font-weight: 500;
+        color: var(--scheme-text);
+        text-decoration: none;
+        transition: opacity 0.2s ease;
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                opacity: 0.75;
+            }
+        }
+    }
+
+    &__socials {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 2.5rem;
+    }
+
+    &__social-link {
+        padding: 1rem 2rem;
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: var(--scheme-text);
+        border: 1px solid var(--scheme-border);
+        border-radius: 20px;
+        transition:
+            color 0.2s ease,
+            background-color 0.2s ease;
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                background-color: var(--scheme-border);
+                color: var(--scheme-text);
+            }
+        }
+    }
+
+    &__form {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    &__form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    &__form-label {
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+
+    &__form-input,
+    &__form-select,
+    &__form-textarea {
+        width: 100%;
+        padding: 0.85rem 1.15rem;
+        font-size: 1.5rem;
+        color: var(--scheme-text);
+        background-color: transparent;
+        outline: none;
+        border: 1px solid var(--scheme-border);
+        border-radius: 12px;
+        transition:
+            border-color 0.2s ease,
+            box-shadow 0.2s ease;
+
+        &::placeholder {
+            color: var(--scheme-text-muted);
+        }
+
+        &:focus {
+            border-color: var(--scheme-accent);
+        }
+    }
+
+    &__form-textarea {
+        resize: vertical;
+        height: 200px;
+        resize: none;
+    }
+
+    &__form-select-wrapper {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 1.25rem;
+            top: 50%;
+            width: 0.55rem;
+            height: 0.55rem;
+            border-right: 2px solid var(--scheme-text);
+            border-bottom: 2px solid var(--scheme-text);
+            transform: translateY(-70%) rotate(45deg);
+            pointer-events: none;
+            opacity: 0.75;
+        }
+    }
+
+    &__form-select {
+        appearance: none;
+        cursor: pointer;
+        padding-right: 2.75rem;
+
+        option {
+            background-color: var(--scheme-background);
+        }
+    }
+
+    // Przycisk "Wyślij wiadomość" (zaokrąglona pigułka)
+    &__form-btn {
+        align-self: flex-start;
+        margin-top: 0.5rem;
+        padding: 0.85rem 2rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: var(--scheme-background);
+        background-color: var(--scheme-text);
+        border: 1px solid transparent;
+        border-radius: 9999px;
+        cursor: pointer;
+        transition:
+            opacity 0.2s ease,
+            transform 0.1s ease;
+        -webkit-tap-highlight-color: transparent;
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                opacity: 0.85;
+            }
+        }
+
+        &:active {
+            transform: scale(0.97);
+        }
+    }
+
+    // --- Prawa kolumna (Mapa / Grafika) ---
+    &__map-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    &__map-img {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+        max-width: 550px;
+        border-radius: 20px;
+        display: block;
+        border: 2px solid var(--scheme-border);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media (min-width: 768px) {
+    .contact__content {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .contact {
+        &__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: start;
+            gap: 4.5rem;
+        }
+
+        &__map-wrapper {
+            align-self: center;
+        }
+
+        &__map-img {
+            max-width: 90%;
+            aspect-ratio: 1/1;
+        }
+    }
+}

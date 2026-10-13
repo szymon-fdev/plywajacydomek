@@ -23,29 +23,26 @@
         <header class="navbar theme-scheme-1">
     <div class="navbar-container">
         <!-- Logo -->
-        <a href="/" class="nav-logo"> Pływający domek </a>
+        <a href="#" class="nav-logo"> Pływający domek </a>
 
         <!-- Menu  -->
         <nav class="nav-menu" id="nav-menu">
             <div class="nav-links">
-                <a href="#" class="nav-link">Domki</a>
-                <a href="#" class="nav-link">Galeria</a>
-                <a href="#" class="nav-link">FAQ</a>
-                <a href="#" class="nav-link">Kontakt</a>
+                <a href="#houses-section" class="nav-link">Domki</a>
+                <a href="#amenities-section" class="nav-link">Udogodnienia</a>
+                <a href="#testimonials-section" class="nav-link">Oceny</a>
+                <a href="#faq-section" class="nav-link">FAQ</a>
+                <a href="#contact-section" class="nav-link">Kontakt</a>
             </div>
 
             <!-- CTA -->
-            <div class="nav-action">
-                <a href="#rezerwacja" class="button button-booknow">Zarezerwuj</a>
+            <div class="nav-action nav-socials">
+                <a href="https://www.facebook.com/plywajacydomek" target="_blank" rel="noopener" class="button button-social"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/plywajacydomek/" target="_blank" rel="noopener" class="button button-social"><i class="bi bi-instagram"></i></a>
             </div>
             <div class="nav-action">
                 <a href="tel:+48573323217" class="button button-call"
-                    ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
-                        <path
-                            d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
-                        />
-                    </svg>
-                    +48 737 480 857</a
+                    ><i class="bi bi-telephone contact__info-icon"></i> +48 737 480 857</a
                 >
             </div>
         </nav>
@@ -70,8 +67,8 @@
         <h1 class="hero__text-heading">Domki, w których odpoczniesz</h1>
         <p>Pływajacy Domek dedykowany dla tych, którzy pragną zaznać spokoju w otoczeniu lasu i wody.</p>
         <div class="hero__btns">
-            <a href="https://www.booking.com" class="hero__btn hero__btn-booknow">Zarezerwuj termin</a>
-            <a href="#houses" class="hero__btn hero__btn-more">Zobacz domki</a>
+            <a href="#contact-section" class="hero__btn hero__btn-booknow">Zarezerwuj termin</a>
+            <a href="#houses-section" class="hero__btn hero__btn-more">Zobacz domki</a>
         </div>
     </div>
 </section>
@@ -116,7 +113,7 @@
     </div>
 </section>
 
-            <section class="section houses theme-scheme-1">
+            <section class="section houses theme-scheme-1" id="houses-section">
     <div class="container">
         <h2 class="section__heading">Nasze domki</h2>
         <p class="section__sub">Trzy domki - dwa pływające i jeden nad brzegiem jeziora. Wybierz ten, który Ci najbardziej pasuje.</p>
@@ -280,7 +277,7 @@
     </div>
 </section>
 
-            <section class="section amenities__section theme-scheme-2">
+            <section class="section amenities__section theme-scheme-2" id="amenities-section">
     <h2 class="section__heading">Udogodnienia</h2>
     <div class="amenities container">
         <!-- KARTA 1: SAUNA -->
@@ -394,7 +391,407 @@
     </ul>
 </section>
 
+            <section class="testimonials section theme-scheme-1" id="testimonials-section">
+    <div class="container">
+        <span class="section__tag">Opinie gości</span>
+        <h2 class="section__heading">Co mówią nasi goście</h2>
+        <div class="testimonials__track" data-slider-track>
+            <!-- Karta 1 -->
+            
+            
+            <article class="testimonials__card">
+    <div class="testimonials__stars" aria-label="Ocena 5 na 5">
+        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+        ><i class="bi bi-star-fill"></i>
+    </div>
+
+    <p class="testimonials__text">
+        Piękne jezioro za drzwiami, choć najlepsze widoki są z "górnego pokładu". W domku jest bardzo przytulnie i miło. Wyjątkowe miejsce i spokojna okolica. Spędziliśmy ten czas aktywnie, pogoda dopisała. Wrócimy 😊
+    </p>
+
+    <div class="testimonials__author">
+        <strong class="testimonials__name">Blue03</strong>
+        <span class="testimonials__source">Gość z Booking.com</span>
+    </div>
+</article>
+
+
+            <!-- Karta 2 -->
+            
+            
+            <article class="testimonials__card">
+    <div class="testimonials__stars" aria-label="Ocena 5 na 5">
+        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+        ><i class="bi bi-star-fill"></i>
+    </div>
+
+    <p class="testimonials__text">
+        Piękne miejsce, idealne dla osób lubiących kontakt z naturą. Cisza, spokój i obłędny widok na jezioro. Wspaniali właściciele, którzy dbali, by niczego nam nie brakowało ❤️
+    </p>
+
+    <div class="testimonials__author">
+        <strong class="testimonials__name">Delfina</strong>
+        <span class="testimonials__source">Gość z Booking.com</span>
+    </div>
+</article>
+
+
+            <!-- Karta 3 -->
+            
+            
+            <article class="testimonials__card">
+    <div class="testimonials__stars" aria-label="Ocena 5 na 5">
+        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+        ><i class="bi bi-star-fill"></i>
+    </div>
+
+    <p class="testimonials__text">
+        Myślałam, że domek na wodzie to taki kaprys, zbędny " bajer". O, jakże się myliłam! Niczym niezakłócony widok na jezioro, z poziomu jeziora, oczarował mnie do głębi! Cudowne doświadczenie. Gospodarz przemiły i pomocny. Miejsce klimatczne i urocze. Serdecznie polecam!
+    </p>
+
+    <div class="testimonials__author">
+        <strong class="testimonials__name">Dobrucka</strong>
+        <span class="testimonials__source">Gość z Booking.com</span>
+    </div>
+</article>
+
+
+            <!-- Karta 5 -->
+            
+            
+            <article class="testimonials__card">
+    <div class="testimonials__stars" aria-label="Ocena 5 na 5">
+        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+        ><i class="bi bi-star-fill"></i>
+    </div>
+
+    <p class="testimonials__text">
+        Przepiękne miejsce, mnóstwo dobrej energii, dopracowanych detali i aktywności dostępnych na miejscu. Dom sam w sobie bardzo komfortowy, a widok na jezioro o poranku to coś z bajki! Właściciel bardzo miły, dbał i zaglądał czy wszystko jest ok. Absolutnie polecam, wrócę na pewno.
+    </p>
+
+    <div class="testimonials__author">
+        <strong class="testimonials__name">Ewa</strong>
+        <span class="testimonials__source">Gość z Booking.com</span>
+    </div>
+</article>
+
+
+            <!-- Karta 4 -->
+            
+            
+            <article class="testimonials__card">
+    <div class="testimonials__stars" aria-label="Ocena 5 na 5">
+        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+        ><i class="bi bi-star-fill"></i>
+    </div>
+
+    <p class="testimonials__text">
+        Bardzo klimatyczne miejsce. Domek pięknie urządzony, funkcjonalny. Wspaniałe widoki. Wiele atrakcji: łódki, supy, balia, sauna. Nie da się tu nudzić ;) do tego bardzo pomocny i sympatyczny właściciel :)
+    </p>
+
+    <div class="testimonials__author">
+        <strong class="testimonials__name">Kinga</strong>
+        <span class="testimonials__source">Gość z Booking.com</span>
+    </div>
+</article>
+
+        </div>
+
+        <div class="testimonials__controls">
+            <div class="testimonials__dots" data-slider-dots>
+                <button class="testimonials__dot testimonials__dot--active" aria-label="Karta 1" data-index="0"></button>
+                <button class="testimonials__dot" aria-label="Karta 2" data-index="1"></button>
+                <button class="testimonials__dot" aria-label="Karta 3" data-index="2"></button>
+                <button class="testimonials__dot" aria-label="Karta 4" data-index="3"></button>
+                <button class="testimonials__dot" aria-label="Karta 5" data-index="4"></button>
+            </div>
+
+            <div class="testimonials__arrows">
+                <button class="testimonials__arrow" data-slider-prev aria-label="Poprzednia opinia">
+                    <i class="bi bi-arrow-left-short"></i>
+                </button>
+                <button class="testimonials__arrow" data-slider-next aria-label="Następna opinia">
+                    <i class="bi bi-arrow-right-short"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <section class="faq section theme-scheme-3" id="faq-section">
+    <div class="container container--narrow">
+        <div class="faq__header">
+            <span class="section__tag">Dobrze wiedzieć</span>
+            <h2 class="section__heading">Najczęstsze pytania</h2>
+            <p class="section__sub">Krótko o dobie hotelowej i zasadach pobytu.</p>
+        </div>
+
+        <div class="faq__list" data-accordion>
+            <!-- Pytanie 1 -->
+            
+            
+            <div class="faq__item">
+    <button class="faq__trigger" type="button" aria-expanded="false">
+        <span class="faq__question">W jakich godzinach jest doba hotelowa?</span>
+        <i class="bi bi-chevron-down faq__icon"></i>
+    </button>
+    <div class="faq__collapse">
+        <div class="faq__body">
+            <p class="faq__text">
+                <strong>Pływający domek:</strong> zameldowanie 15:00 - 17:00, wymeldowanie 10:00 - 12:00 <br>
+             <strong>Pływająca brda:</strong> zameldowanie 14:00 - 18:00, wymeldowanie 24h<br>
+             <strong>Szklana stodoła:</strong> zameldowanie 15:00 - 18:00, wymeldowanie 08:00 - 11:00
+            </p>
+        </div>
+    </div>
+</div>
+
+
+            <!-- Pytanie 2 -->
+            
+            
+            <div class="faq__item">
+    <button class="faq__trigger" type="button" aria-expanded="false">
+        <span class="faq__question">Czy można przyjechać ze zwierzęciem?</span>
+        <i class="bi bi-chevron-down faq__icon"></i>
+    </button>
+    <div class="faq__collapse">
+        <div class="faq__body">
+            <p class="faq__text">
+                Z myślą o komforcie i bezpieczeństwie wszystkich gości – w tym osób z alergiami – nasz obiekt nie przyjmuje zwierząt. Liczymy na Państwa wyrozumiałość i serdecznie zapraszamy do rezerwacji.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+            <!-- Pytanie 3 -->
+            
+            
+            <div class="faq__item">
+    <button class="faq__trigger" type="button" aria-expanded="false">
+        <span class="faq__question">Czy na miejscu jest parking?</span>
+        <i class="bi bi-chevron-down faq__icon"></i>
+    </button>
+    <div class="faq__collapse">
+        <div class="faq__body">
+            <p class="faq__text">
+                Tak, zapewniamy bezpłatne, bezpieczne miejsca parkingowe na terenie obiektu.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+            <!-- Pytanie 4 -->
+            
+            
+            <div class="faq__item">
+    <button class="faq__trigger" type="button" aria-expanded="false">
+        <span class="faq__question">Kaucja zwrotna na poczet zniszczeń</span>
+        <i class="bi bi-chevron-down faq__icon"></i>
+    </button>
+    <div class="faq__collapse">
+        <div class="faq__body">
+            <p class="faq__text">
+                Depozyt na poczet zniszczeń w wysokości 500 zł jest wymagany po przyjeździe. Będzie to płatność gotówkowa. Zapłacona kwota powinna zostać zwrócona przy wymeldowaniu. Całość depozytu zostanie zwrócona w gotówce po sprawdzeniu stanu obiektu.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+            <!-- Pytanie 5 -->
+            
+            
+            <div class="faq__item">
+    <button class="faq__trigger" type="button" aria-expanded="false">
+        <span class="faq__question">Czy sauna i balia są wliczone w cenę pobytu?</span>
+        <i class="bi bi-chevron-down faq__icon"></i>
+    </button>
+    <div class="faq__collapse">
+        <div class="faq__body">
+            <p class="faq__text">
+                Sauna oraz balia to atrakcje dodatkowo płatne, które nie wchodzą w podstawową cenę wynajmu. Szczegółowy cennik tych usług chętnie podamy podczas rezerwacji lub na miejscu.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+            <!-- Pytanie 6 -->
+            
+            
+            <div class="faq__item">
+    <button class="faq__trigger" type="button" aria-expanded="false">
+        <span class="faq__question">Jak wygląda rezerwacja i płatność?</span>
+        <i class="bi bi-chevron-down faq__icon"></i>
+    </button>
+    <div class="faq__collapse">
+        <div class="faq__body">
+            <p class="faq__text">
+                Rezerwacji dokonasz przez Booking.com, telefonicznie, mailowo lub przez Facebooka. Wybierając rezerwację bezpośrednią (e-mail/Facebook), otrzymujesz <strong>rabat do 10%</strong> względem cen na Bookingu. Warunki płatności zależą od wybranej opcji.
+            </p>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+</section>
+
+            <section class="contact section theme-scheme-2" id="contact-section">
+    <div class="container">
+        <div class="contact__grid">
+            <div class="contact__content">
+                <header class="contact__header">
+                    <h2 class="section__heading contact__title">Kontakt i lokalizacja</h2>
+                    <p class="section__sub contact__desc">
+                        Masz pytanie przed rezerwacją? Zadzwoń albo napisz - odpowiadamy najszybciej, jak możemy.
+                    </p>
+                </header>
+
+                <div class="contact__socials">
+                    <a href="https://www.facebook.com/plywajacydomek" class="contact__social-link" target="_blank" rel="noopener"
+                        ><strong><i class="bi bi-facebook"></i> Facebook</strong></a
+                    >
+                    <a href="https://www.instagram.com/plywajacydomek/" class="contact__social-link" target="_blank" rel="noopener"
+                        ><strong><i class="bi bi-instagram"></i> Instagram</strong></a
+                    >
+                </div>
+                <div class="contact__info">
+                    <div class="contact__info-item">
+                        <i class="bi bi-telephone contact__info-icon"></i>
+                        <div class="contact__info-text">
+                            <span class="contact__info-label">Telefon</span>
+                            <a href="tel:+48737480857" class="contact__info-value">+48 737 480 857</a>
+                        </div>
+                    </div>
+
+                    <div class="contact__info-item">
+                        <i class="bi bi-envelope contact__info-icon"></i>
+                        <div class="contact__info-text">
+                            <span class="contact__info-label">E-mail</span>
+                            <a href="mailto:plywajacydomek@gmail.com" class="contact__info-value">plywajacydomek@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact__info-item">
+                        <i class="bi bi-geo-alt contact__info-icon"></i>
+                        <div class="contact__info-text">
+                            <span class="contact__info-label">Adres</span>
+                            <a href="https://maps.app.goo.gl/FbKcWPBCkBjHeSFq9" class="contact__info-value" target="_blank" rel="noopener"
+                                >Wczasowa 11, 83-047 Przywidz</a
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact__form" id="contact-form">
+                    <div class="contact__form-group">
+                        <label for="contact-name" class="contact__form-label">Imię i nazwisko *</label>
+                        <input type="text" id="contact-name" name="name" class="contact__form-input" placeholder="Imię i nazwisko" required />
+                    </div>
+
+                    <div class="contact__form-group">
+                        <label for="contact-email" class="contact__form-label">E-mail *</label>
+                        <input type="email" id="contact-email" name="email" class="contact__form-input" placeholder="twoj@email.pl" required />
+                    </div>
+
+                    <div class="contact__form-group">
+                        <label for="contact-subject" class="contact__form-label">Temat *</label>
+                        <div class="contact__form-select-wrapper">
+                            <select id="contact-subject" name="subject" class="contact__form-select" required>
+                                <option value="rezerwacja">Rezerwacja</option>
+                                <option value="pytanie">Pytanie ogólne</option>
+                                <option value="inne">Inne</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="contact__form-group">
+                        <label for="contact-message" class="contact__form-label">Wiadomość *</label>
+                        <textarea
+                            id="contact-message"
+                            name="message"
+                            class="contact__form-textarea"
+                            rows="4"
+                            placeholder="W czym możemy pomóc?"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="contact__form-btn">Wyślij wiadomość</button>
+                </form>
+            </div>
+
+            <div class="contact__map-wrapper">
+                <iframe
+                    class="contact__map-img"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2334.2415235171243!2d18.32413161299706!3d54.19350747243266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd823dd0b4503d%3A0x32122555ebbc4312!2sWczasowa%2011%2C%2083-047%20Przywidz!5e0!3m2!1spl!2spl!4v1791925070013!5m2!1spl!2spl"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                ></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+            
         </main>
+        <footer class="footer theme-scheme-3" id="footer">
+    <div class="container">
+        <div class="footer__content">
+            <a href="#" class="footer__logo" aria-label="Strona główna">
+                <span class="footer__logo-text">Pływający domek</span>
+            </a>
+            <nav class="footer__nav" aria-label="Nawigacja w stopce">
+                <ul class="footer__nav-list">
+                    <li class="footer__nav-item">
+                        <a href="#domki" class="footer__nav-link">Domki</a>
+                    </li>
+                    <li class="footer__nav-item">
+                        <a href="#okolica" class="footer__nav-link">Udogodnienia</a>
+                    </li>
+                    <li class="footer__nav-item">
+                        <a href="#opinie" class="footer__nav-link">Opinie</a>
+                    </li>
+                    <li class="footer__nav-item">
+                        <a href="#faq" class="footer__nav-link">FAQ</a>
+                    </li>
+                    <li class="footer__nav-item">
+                        <a href="#kontakt" class="footer__nav-link">Kontakt</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="footer__socials">
+                <a href="#" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="#" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </div>
+            <div class="footer__contact">
+                <div class="footer__contact-item">
+                    <i class="bi bi-telephone footer__contact-icon"></i>
+                    <span class="footer__contact-label">Telefon</span>
+                    <a href="tel:+48737480857" class="footer__contact-value">+48 737 480 857</a>
+                </div>
+                <div class="footer__contact-item">
+                    <i class="bi bi-envelope footer__contact-icon"></i>
+                    <span class="footer__contact-label">E-mail</span>
+                    <a href="mailto:plywajacydomek@gmail.com" class="footer__contact-value">plywajacydomek@gmail.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p class="footer__copyright">&copy; Pływający domek. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </div>
+</footer>
+
         <script src="/dist/js/main.min.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
     </body>

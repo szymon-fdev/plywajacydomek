@@ -1,4 +1,4 @@
-$breakpoint-lg: 992px;
+$breakpoint-lg: 1024px;
 $nav-height-mobile: 6rem;
 $nav-height-desktop: 5rem;
 $nav-padding-mobile: 2.5rem;
@@ -8,7 +8,6 @@ $font-heading: 'Fraunces', serif;
 $font-body: 'Figtree', sans-serif;
 
 body {
-    // background-color: gray;
     color: var(--scheme-text);
     font-family: $font-body;
 }
@@ -23,6 +22,10 @@ body {
     }
 }
 
+.section {
+    scroll-margin-top: var(--navbar-height);
+}
+
 .navbar {
     position: sticky;
     top: 0;
@@ -34,6 +37,12 @@ body {
     background-color: var(--scheme-background);
     border-bottom: 1px solid var(--scheme-border);
     transition: background-color 0.3s ease;
+
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    // will-change: transform;
 
     &-container {
         width: 100%;
@@ -79,6 +88,10 @@ body {
             background-color: var(--scheme-heading);
             border-radius: 2px;
             transition: all 0.3s ease;
+
+            &:nth-child(2) {
+                transition: all 0.1s;
+            }
         }
     }
 
@@ -87,7 +100,7 @@ body {
             transform: translateY(8px) rotate(45deg);
         }
         span:nth-child(2) {
-            opacity: 0;
+            transform: scale(0);
         }
         span:nth-child(3) {
             transform: translateY(-8px) rotate(-45deg);
@@ -137,32 +150,29 @@ body {
     padding: 1rem 0;
     transition: color 0.2s ease;
 
-    &:hover {
-        color: var(--scheme-accent);
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            color: var(--scheme-accent);
+
+            &::after {
+                transform: scaleX(1);
+            }
+        }
     }
 
-    &::before,
     &::after {
         content: '';
         position: absolute;
-        background-color: var(--scheme-accent);
-        width: 0%;
-        height: 2px;
-        bottom: 0;
-        transition: width 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    }
-
-    &::before {
         left: 0;
-    }
-
-    &::after {
-        right: 0;
-    }
-
-    &:hover::before,
-    &:hover::after {
+        bottom: 0;
         width: 100%;
+        height: 2px;
+        background-color: var(--scheme-accent);
+
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        pointer-events: none;
     }
 }
 
@@ -187,9 +197,12 @@ body {
         text-decoration: none;
         transition: 0.2s ease;
 
-        &-booknow {
+        &-social {
+            font-size: 2rem;
+            padding: 2rem 5rem;
             background-color: var(--scheme-text);
             color: var(--scheme-background);
+
             &:hover {
                 opacity: 0.8;
             }
@@ -209,6 +222,11 @@ body {
             flex-shrink: 0;
         }
     }
+}
+
+.nav-socials {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 @media (min-width: $breakpoint-lg) {
@@ -251,7 +269,7 @@ body {
             padding: 1rem 2rem;
             font-size: 1.6rem;
 
-            &-booknow {
+            &-social {
                 margin-left: 1rem;
             }
         }
