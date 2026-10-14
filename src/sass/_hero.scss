@@ -9,7 +9,7 @@
         color: var(--scheme-text);
         background-size: cover;
         background-position: 42% top;
-        background-image: url('./dist/img/herobg2-mb.webp');
+        background-image: url('../img/herobg2-mb.webp');
         overflow: hidden;
         z-index: 0;
     }
@@ -81,7 +81,7 @@
 @media (min-width: 1024px) {
     .hero {
         &__head {
-            background-image: url('./dist/img/herobg2.webp');
+            background-image: url('../img/herobg2.webp');
             height: calc(100vh - 72px);
         }
         &__text {
