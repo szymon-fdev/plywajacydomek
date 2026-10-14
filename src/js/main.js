@@ -1,14 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const setAppHeight = () => {
-        // Pobieramy realną wysokość widocznego okna
         const vh = window.innerHeight;
         document.documentElement.style.setProperty('--initial-vh', `${vh}px`);
     };
 
-    // Ustaw raz przy starcie
     setAppHeight();
 
-    // Przelicz TYLKO przy obrocie telefonu (pion/poziom), a NIE przy zwykłym scrollowaniu
     window.addEventListener('orientationchange', () => {
         setTimeout(setAppHeight, 150);
     });
@@ -17,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     const initAmenitiesSliders = () => {
         const cards = document.querySelectorAll('.amenities__card');
+
         cards.forEach((card) => {
             const track = card.querySelector('.amenities__track');
             const slides = card.querySelectorAll('.amenities__slide');
@@ -25,28 +23,46 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!track || slides.length < 2) return;
 
             let index = 0;
+            let timer = null;
+
             const update = () => (track.style.transform = `translateX(-${index * 100}%)`);
+
+            const nextSlide = () => {
+                index = (index + 1) % slides.length;
+                update();
+            };
+
+            const prevSlide = () => {
+                index = (index - 1 + slides.length) % slides.length;
+                update();
+            };
+
+            const startTimer = () => {
+                timer = setInterval(nextSlide, 7000);
+            };
+
+            const resetTimer = () => {
+                clearInterval(timer);
+                startTimer();
+            };
 
             if (nextBtn) {
                 nextBtn.addEventListener('click', () => {
-                    index = (index + 1) % slides.length;
-                    update();
+                    nextSlide();
+                    resetTimer();
                 });
             }
 
             if (prevBtn) {
                 prevBtn.addEventListener('click', () => {
-                    index = (index - 1 + slides.length) % slides.length;
-                    update();
+                    prevSlide();
+                    resetTimer();
                 });
             }
-
-            setInterval(() => {
-                index = (index + 1) % slides.length;
-                update();
-            }, 7000);
+            startTimer();
         });
     };
+
     initAmenitiesSliders();
 
     // ==========================================
@@ -252,7 +268,6 @@ document.addEventListener('DOMContentLoaded', () => {
             trigger.addEventListener('click', () => {
                 const isOpen = item.classList.contains('is-active');
 
-                // Zwija pozostałe pytania (efekt akordeonu z Relume)
                 items.forEach((otherItem) => {
                     if (otherItem !== item) {
                         otherItem.classList.remove('is-active');
@@ -261,7 +276,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 });
 
-                // Przełącza kliknięte pytanie
                 item.classList.toggle('is-active', !isOpen);
                 trigger.setAttribute('aria-expanded', String(!isOpen));
             });
