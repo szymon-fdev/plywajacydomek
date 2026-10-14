@@ -1,4 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const setAppHeight = () => {
+        // Pobieramy realną wysokość widocznego okna
+        const vh = window.innerHeight;
+        document.documentElement.style.setProperty('--initial-vh', `${vh}px`);
+    };
+
+    // Ustaw raz przy starcie
+    setAppHeight();
+
+    // Przelicz TYLKO przy obrocie telefonu (pion/poziom), a NIE przy zwykłym scrollowaniu
+    window.addEventListener('orientationchange', () => {
+        setTimeout(setAppHeight, 150);
+    });
     // ==========================================
     // 1. SLIDERY W KARTACH (Amenities)
     // ==========================================
@@ -83,15 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
-
-        dots.forEach((dot) => {
-            dot.addEventListener('click', () => {
-                const index = parseInt(dot.dataset.index, 10);
-                if (cards[index]) {
-                    cards[index].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
-                }
-            });
-        });
 
         track.addEventListener(
             'scroll',

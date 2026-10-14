@@ -79,8 +79,7 @@
         height: 8px;
         border-radius: 50%;
         border: none;
-        padding: 0;
-        cursor: pointer;
+        pointer-events: none;
         background-color: var(--scheme-accent-subtle);
         transition:
             background-color 0.2s ease,

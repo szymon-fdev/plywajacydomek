@@ -2,16 +2,15 @@
 @use './brand_colors' as *;
 
 .hero {
-    position: relative;
-    color: var(--scheme-text);
-    overflow: hidden;
-
     &__head {
+        position: relative;
         width: 100%;
-        height: 100svh;
-        background-image: url('/dist/img/herobg2.webp');
+        height: var(--initial-vh, 100svh);
+        color: var(--scheme-text);
         background-size: cover;
         background-position: 42% top;
+        background-image: url('/dist/img/herobg2-mb.webp');
+        overflow: hidden;
         z-index: 0;
     }
 
@@ -19,7 +18,7 @@
         position: absolute;
         height: 100%;
         width: 100%;
-        background-color: rgba(0, 0 ,0, 0.7);
+        background-color: rgba(0, 0, 0, 0.7);
         z-index: -2;
     }
 
@@ -39,7 +38,7 @@
         &-heading {
             margin: 0.5rem 0 2.6rem 0;
             font-size: 3.5rem;
-            font-family: Fraunces, serif;
+            font-family: var(--font-family-heading);
         }
     }
 
@@ -60,7 +59,7 @@
         transition: 0.3s ease;
 
         &-booknow {
-            background-color: $light-green;
+            background-color: var(--scheme-cta);
             color: var(--scheme-background);
         }
 
@@ -79,9 +78,10 @@
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
     .hero {
         &__head {
+            background-image: url('/dist/img/herobg2.webp');
             height: calc(100vh - 72px);
         }
         &__text {

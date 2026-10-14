@@ -89,17 +89,12 @@
 
 @media (min-width: 768px) {
     .amenities {
+        grid-template-columns: repeat(2, 1fr);
         &__list {
             &-item {
                 flex: 0 0 calc(50% - (1rem / 2));
             }
         }
-    }
-}
-
-@media (min-width: 992px) {
-    .amenities {
-        grid-template-columns: repeat(2, 1fr);
     }
 }
 

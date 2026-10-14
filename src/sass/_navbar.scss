@@ -13,6 +13,8 @@ body {
 }
 
 :root {
+    --font-family-body: #{$font-body};
+    --font-family-heading: #{$font-heading};
     --navbar-height: #{$nav-height-mobile};
     --navbar-padding-x: #{$nav-padding-mobile};
 
@@ -20,10 +22,6 @@ body {
         --navbar-height: #{$nav-height-desktop};
         --navbar-padding-x: #{$nav-padding-desktop};
     }
-}
-
-.section {
-    scroll-margin-top: var(--navbar-height);
 }
 
 .navbar {
@@ -198,8 +196,9 @@ body {
         transition: 0.2s ease;
 
         &-social {
+            height: auto;
             font-size: 2rem;
-            padding: 2rem 5rem;
+            padding: 1rem 5rem;
             background-color: var(--scheme-text);
             color: var(--scheme-background);
 
@@ -255,12 +254,12 @@ body {
     .nav-links {
         font-weight: 300;
         flex-direction: row;
-        gap: 1rem;
+        gap:0;
     }
 
     .nav-link {
         font-size: 1.6rem;
-        padding: 0.5rem 1rem;
+        padding: 0.8rem 1.5rem;
     }
 
     .nav-action {
@@ -270,6 +269,7 @@ body {
             font-size: 1.6rem;
 
             &-social {
+                height: 37px;
                 margin-left: 1rem;
             }
         }
