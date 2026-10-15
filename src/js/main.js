@@ -52,7 +52,30 @@ const initPromoModal = () => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Inicjalizacja modala
     initPromoModal();
+    //Czyszczenie URL z anchor linków
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener('click', function (e) {
+            // 2. Zablokuj domyślne przeskoczenie przeglądarki do sekcji
+            e.preventDefault();
+
+            // 3. Pobierz id docelowej sekcji (np. "#kontakt")
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                // 4. Płynnie przewiń stronę do tego elementu
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                });
+
+                // 5. Usuń hash z paska adresu bez odświeżania strony
+                history.replaceState(null, document.title, window.location.pathname + window.location.search);
+            }
+        });
+    });
 
     const setAppHeight = () => {
         const vh = window.innerHeight;

@@ -111,10 +111,11 @@
         transition:
             opacity 0.2s ease,
             background-color 0.2s ease;
-
-        &:hover {
-            opacity: 0.8;
-            background-color: var(--scheme-border);
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                opacity: 0.8;
+                background-color: var(--scheme-border);
+            }
         }
     }
 }

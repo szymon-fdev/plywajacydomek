@@ -51,8 +51,12 @@
         cursor: pointer;
         font-size: 20px;
         z-index: 2;
-        &:hover {
-            background: var(--scheme-accent);
+        transition: background 0.2s ease;
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                background: var(--scheme-accent);
+            }
         }
         &--prev {
             left: 10px;

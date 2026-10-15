@@ -13,6 +13,10 @@ body {
     background-color: #081510;
 }
 
+main {
+    background-color: #fff;
+}
+
 :root {
     --font-family-body: #{$font-body};
     --font-family-heading: #{$font-heading};
@@ -202,18 +206,20 @@ body {
             padding: 1rem 5rem;
             background-color: var(--scheme-text);
             color: var(--scheme-background);
-
-            &:hover {
-                opacity: 0.8;
+            @media (hover: hover) and (pointer: fine) {
+                &:hover {
+                    opacity: 0.8;
+                }
             }
         }
 
         &-call {
             border: solid 1px var(--scheme-border);
             color: var(--scheme-text);
-
-            &:hover {
-                background-color: var(--scheme-border);
+            @media (hover: hover) and (pointer: fine) {
+                &:hover {
+                    background-color: var(--scheme-border);
+                }
             }
         }
 
@@ -255,7 +261,7 @@ body {
     .nav-links {
         font-weight: 300;
         flex-direction: row;
-        gap:0;
+        gap: 0;
     }
 
     .nav-link {

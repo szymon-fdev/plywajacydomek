@@ -74,8 +74,10 @@
         cursor: pointer;
         color: var(--scheme-text);
         transition: color 0.2s;
-        &:hover {
-            color: var(--scheme-cta);
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                color: var(--scheme-cta);
+            }
         }
     }
 
@@ -105,8 +107,10 @@
         background: var(--scheme-cta);
         color: var(--scheme-text);
         transition: opacity 0.2s ease;
-        &:hover {
-            opacity: 0.8;
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                opacity: 0.8;
+            }
         }
     }
 
@@ -114,8 +118,10 @@
         background: transparent;
         border: 1px solid var(--scheme-border);
         color: var(--scheme-text-muted);
-        &:hover {
-            background: var(--scheme-border);
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                background: var(--scheme-border);
+            }
         }
     }
 }
@@ -131,5 +137,11 @@
         flex-direction: row;
         justify-content: center;
         gap: 3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .modal__content {
+        width: 45%;
     }
 }

@@ -26,9 +26,10 @@
         object-fit: cover;
         display: block;
         transition: transform 0.35s ease;
-
-        .cottage-card__cover:hover & {
-            transform: scale(1.03);
+        @media (hover: hover) and (pointer: fine) {
+            .cottage-card__cover:hover & {
+                transform: scale(1.03);
+            }
         }
     }
 
@@ -47,9 +48,10 @@
         font-size: 1.8rem;
         backdrop-filter: blur(4px);
         transition: background 0.2s ease;
-
-        .cottage-card__cover:hover & {
-            background: rgba(0, 0, 0, 0.8);
+        @media (hover: hover) and (pointer: fine) {
+            .cottage-card__cover:hover & {
+                background: rgba(0, 0, 0, 0.8);
+            }
         }
     }
 
@@ -91,12 +93,11 @@
         background-color: transparent;
         border: solid 1px var(--scheme-border);
         border-radius: 20px;
-        transition:0.2s ease;
-        
-        &:hover {
-            background-color: var(--scheme-border);
-            // color: var(--scheme-);
-
+        transition: 0.2s ease;
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                background-color: var(--scheme-border);
+            }
         }
     }
 }

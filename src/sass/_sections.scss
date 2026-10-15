@@ -49,6 +49,12 @@
 }
 
 @media (min-width: 1024px) {
+
+    .booking-bar{
+        .section__heading {
+            margin-bottom: 3.5rem;
+        }
+    }
     .section {
         &__heading {
             font-size: 4.2rem;

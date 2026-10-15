@@ -3,18 +3,17 @@
 
 .booking-bar {
     background-color: var(--scheme-background-secondary);
-    padding: 2rem 1.5rem;
     position: relative;
     z-index: 10;
 
     &__container {
         max-width: 1200px;
         margin: 0 auto;
+        padding: 2rem 1.5rem;
         background-color: var(--scheme-background);
         border: 1px solid var(--scheme-border);
         border-radius: 12px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        padding: 1.5rem;
     }
 
     &__form {
@@ -78,7 +77,7 @@
             padding: 1rem 1.5rem;
             background-color: var(--scheme-cta);
             color: var(--scheme-background);
-            border-radius: 8px;
+            border-radius: 10px;
             font-size: 1.2rem;
             font-family: var(--font-family-body);
             font-weight: 600;
@@ -94,9 +93,10 @@
                 pointer-events: none;
                 background-color: var(--scheme-border);
             }
-
-            &:hover:not(.button--disabled) {
-                opacity: 0.85;
+            @media (hover: hover) and (pointer: fine) {
+                &:hover:not(.button--disabled) {
+                    opacity: 0.85;
+                }
             }
         }
     }
@@ -117,11 +117,13 @@
 
 @media (min-width: 992px) {
     .booking-bar {
-        padding: 0 2rem;
-
         transform: translateY(-50%);
         margin-bottom: -50px;
         background-color: transparent;
+
+        &__container {
+            padding: 2.5rem 3.5rem;
+        }
 
         &__form {
             flex-direction: row;
@@ -133,7 +135,7 @@
         }
 
         &__action {
-            margin-top: 0;
+            margin: 0;
             flex: 1.2;
 
             .button {
