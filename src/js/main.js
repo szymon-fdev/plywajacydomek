@@ -1,4 +1,59 @@
+const initPromoModal = () => {
+    const modal = document.getElementById('promo-modal');
+    const closeBtn = document.getElementById('close-modal');
+    const openButtons = document.querySelectorAll('.js-open-modal');
+    const overlay = modal ? modal.querySelector('.modal__overlay') : null;
+    const actionLinks = modal ? modal.querySelectorAll('.js-modal-link') : [];
+
+    if (!modal) return;
+    const getScrollbarWidth = () => {
+        return window.innerWidth - document.documentElement.clientWidth;
+    };
+
+    const openModal = (showButtons = false) => {
+        if (showButtons) {
+            modal.classList.add('modal--show-actions');
+        } else {
+            modal.classList.remove('modal--show-actions');
+        }
+        modal.classList.add('is-active');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeModal = () => {
+        modal.classList.remove('is-active');
+        document.body.style.overflow = '';
+    };
+
+    if (!sessionStorage.getItem('promoWasShown')) {
+        setTimeout(() => {
+            openModal(false);
+            sessionStorage.setItem('promoWasShown', 'true');
+        }, 1500);
+    }
+
+    openButtons.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal(true);
+        });
+    });
+
+    actionLinks.forEach((link) => {
+        link.addEventListener('click', closeModal);
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (overlay) overlay.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+    });
+};
+
 document.addEventListener('DOMContentLoaded', () => {
+    initPromoModal();
+
     const setAppHeight = () => {
         const vh = window.innerHeight;
         document.documentElement.style.setProperty('--initial-vh', `${vh}px`);
@@ -282,4 +337,80 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
     initFaq();
+
+    function initContactForm() {
+        const form = document.getElementById('contact-form');
+        if (!form) return; // Zabezpieczenie na wypadek, gdyby formularza nie było na danej podstronie
+
+        const submitBtn = form.querySelector('.contact__form-btn');
+
+        form.addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const originalBtnText = submitBtn.innerText;
+            submitBtn.innerText = 'Wysyłanie...';
+            submitBtn.disabled = true;
+
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch('send.php', {
+                    method: 'POST',
+                    body: formData,
+                });
+
+                const result = await response.json();
+
+                if (response.ok && result.status === 'success') {
+                    alert('Dziękujemy! Wiadomość została pomyślnie wysłana.');
+                    form.reset();
+                } else {
+                    alert(result.message || 'Wystąpił błąd podczas wysyłania.');
+                }
+            } catch (error) {
+                alert('Wystąpił problem z połączeniem. Spróbuj ponownie później.');
+            } finally {
+                submitBtn.innerText = originalBtnText;
+                submitBtn.disabled = false;
+            }
+        });
+    }
+    function initContactForm() {
+        const form = document.getElementById('contact-form');
+        if (!form) return; // Zabezpieczenie na wypadek, gdyby formularza nie było na danej podstronie
+
+        const submitBtn = form.querySelector('.contact__form-btn');
+
+        form.addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const originalBtnText = submitBtn.innerText;
+            submitBtn.innerText = 'Wysyłanie...';
+            submitBtn.disabled = true;
+
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch('send.php', {
+                    method: 'POST',
+                    body: formData,
+                });
+
+                const result = await response.json();
+
+                if (response.ok && result.status === 'success') {
+                    alert('Dziękujemy! Wiadomość została pomyślnie wysłana.');
+                    form.reset();
+                } else {
+                    alert(result.message || 'Wystąpił błąd podczas wysyłania.');
+                }
+            } catch (error) {
+                alert('Wystąpił problem z połączeniem. Spróbuj ponownie później.');
+            } finally {
+                submitBtn.innerText = originalBtnText;
+                submitBtn.disabled = false;
+            }
+        });
+    }
+    initContactForm();
 });

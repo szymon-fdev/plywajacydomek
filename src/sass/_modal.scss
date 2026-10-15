@@ -1,0 +1,135 @@
+@use './colors_themes' as theme;
+@use './brand_colors' as *;
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+
+    &.is-active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.85);
+    }
+
+    &__content {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        background: var(--scheme-background);
+        width: 90%;
+        max-height: 70%;
+        padding: 4rem 3rem;
+        border-radius: 10px;
+        text-align: center;
+        transform: translateY(20px);
+        transition: transform 0.3s ease;
+
+        .is-active & {
+            transform: translateY(0);
+        }
+    }
+
+    &__title {
+        font-family: var(--font-family-heading);
+        font-size: 3rem;
+        color: var(--scheme-heading);
+        margin-bottom: 1rem;
+    }
+
+    &__body {
+        font-size: 1.6rem;
+        color: var(--scheme-text);
+        strong {
+            color: var(--scheme-cta);
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        background: none;
+        border: none;
+        font-size: 3.2rem;
+        line-height: 1;
+        cursor: pointer;
+        color: var(--scheme-text);
+        transition: color 0.2s;
+        &:hover {
+            color: var(--scheme-cta);
+        }
+    }
+
+    &__actions {
+        display: none;
+        margin-top: 2.5rem;
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    &--show-actions {
+        .modal__actions {
+            display: flex;
+        }
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 1.4rem 2.4rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 20px;
+    transition: background 0.2s;
+
+    &--primary {
+        background: var(--scheme-cta);
+        color: var(--scheme-text);
+        transition: opacity 0.2s ease;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    &--booking {
+        background: transparent;
+        border: 1px solid var(--scheme-border);
+        color: var(--scheme-text-muted);
+        &:hover {
+            background: var(--scheme-border);
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .modal__content {
+        width: 60%;
+        max-height: 80%;
+        padding: 4rem 5rem;
+    }
+
+    .modal__actions {
+        flex-direction: row;
+        justify-content: center;
+        gap: 3rem;
+    }
+}

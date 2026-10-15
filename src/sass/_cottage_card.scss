@@ -88,14 +88,14 @@
         color: var(--scheme-text);
         font-size: 1.4rem;
         font-weight: 600;
-        text-decoration: none;
+        background-color: transparent;
         border: solid 1px var(--scheme-border);
         border-radius: 20px;
         transition:0.2s ease;
         
         &:hover {
-            background-color: var(--scheme-text);
-            color: var(--scheme-background);
+            background-color: var(--scheme-border);
+            // color: var(--scheme-);
 
         }
     }

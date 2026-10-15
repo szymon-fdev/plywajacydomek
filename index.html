@@ -7,11 +7,12 @@
             name="description"
             content="Wybierz Pływający Domek, Pływającą Brdę lub Szklaną Stodołę! Wyjątkowy relaks blisko natury, sauna i balia. Rezerwuj bezpośrednio i zyskaj do 10% rabatu."
         />
-        <title>Pływające domki - Przywidz</title>
+        <title>Pływająy domek - Przywidz</title>
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="icon" href="./dist/img/favicon.svg" type="image/svg+xml" />
 <link rel="preload" as="image" href="./dist/img/herobg2-mb.webp" media="(max-width: 991.98px)" fetchpriority="high" />
 <link rel="preload" as="image" href="./dist/img/herobg2.webp" media="(min-width: 992px)" fetchpriority="high" />
 <link rel="stylesheet" href="./dist/css/main.min.css" />
@@ -101,12 +102,12 @@
         <h1 class="hero__text-heading">Domki, w których odpoczniesz</h1>
         <p>Pływajacy Domek dedykowany dla tych, którzy pragną zaznać spokoju w otoczeniu lasu i wody.</p>
         <div class="hero__btns">
-            <a href="#contact-section" class="hero__btn hero__btn-booknow">Zarezerwuj termin</a>
+            <a href="#contact-section" class="hero__btn hero__btn-booknow js-open-modal">Zarezerwuj termin</a>
             <a href="#houses-section" class="hero__btn hero__btn-more">Zobacz domki</a>
         </div>
     </div>
 </section>
-            <section class="section booking-bar theme-scheme-3">
+            <section class="section booking-bar theme-scheme-3" id="booking-section">
     <div class="booking-bar__container">
         <h2 class="section__heading">Sprawdź dostępne terminy</h2>
         <form class="booking-bar__form" id="booking-form">
@@ -173,7 +174,6 @@
         
         
         
-        
         <article class="cottage-card">
     <div class="cottage-card__media">
         <a href="./dist/img/alaska1.webp" class="cottage-card__cover glightbox" data-gallery="domek-sosnowy">
@@ -199,15 +199,14 @@
         <h3 class="cottage-card__title">Pływający domek (Alaska)</h3>
         <p class="cottage-card__desc-attributes"><i class="bi bi-water"></i> Na wodzie <i class="bi bi-person"></i> 2 os.</p>
         <p class="cottage-card__desc">Kameralny domek na tafli jeziora. Jego największym atutem jest wypoczynkowy taras na dachu.</p>
-        <a href="https://www.booking.com/hotel/pl/plywajacy-domek-przywidz.pl.html" class="cottage-card__link" target="_blank" rel="noopener noreferrer">
+        <button class="cottage-card__link js-open-modal">
             Sprawdź dostępność <i class="bi bi-arrow-right"></i>
-        </a>
+        </button>
     </div>
 </article>
 
 
         <!-- DOMEK 2: BRDA -->
-        
         
         
         
@@ -246,15 +245,14 @@
         <h3 class="cottage-card__title">Pływająca Brda</h3>
         <p class="cottage-card__desc-attributes"><i class="bi bi-water"></i> Na wodzie <i class="bi bi-person"></i> 4 os.</p>
         <p class="cottage-card__desc">Niezwykły klimat na samej wodzie. Z tarasu zejdziesz prosto do jeziora, a chłodniejsze wieczory spędzisz w przytulnym wnętrzu przy rozpalonym kominku.</p>
-        <a href="https://www.booking.com/hotel/pl/plywajaca-brda.pl.html" class="cottage-card__link" target="_blank" rel="noopener noreferrer">
+        <button class="cottage-card__link js-open-modal">
             Sprawdź dostępność <i class="bi bi-arrow-right"></i>
-        </a>
+        </button>
     </div>
 </article>
 
 
         <!-- DOMEK 3: STODOŁA -->
-        
         
         
         
@@ -293,9 +291,9 @@
         <h3 class="cottage-card__title">Szklana Stodoła</h3>
         <p class="cottage-card__desc-attributes"><i class="bi bi-tree"></i> Na lądzie <i class="bi bi-person"></i> 6 os.</p>
         <p class="cottage-card__desc">Nowoczesny design, ogromne przeszklenia i widok na las prosto z łóżka.</p>
-        <a href="https://www.booking.com/hotel/pl/szklana-stodola.pl.html" class="cottage-card__link" target="_blank" rel="noopener noreferrer">
+        <button class="cottage-card__link js-open-modal">
             Sprawdź dostępność <i class="bi bi-arrow-right"></i>
-        </a>
+        </button>
     </div>
 </article>
 
@@ -422,17 +420,14 @@
         <h2 class="section__heading">Co mówią nasi goście</h2>
         <div class="testimonials__track" data-slider-track>
             <!-- Karta 1 -->
-            
-            
-            <article class="testimonials__card">
+                                    <article class="testimonials__card">
     <div class="testimonials__stars">
         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
         ><i class="bi bi-star-fill"></i>
     </div>
 
     <p class="testimonials__text">
-        Piękne jezioro za drzwiami, choć najlepsze widoki są z "górnego pokładu". W domku jest bardzo przytulnie i miło. Wyjątkowe miejsce i spokojna okolica. Spędziliśmy ten czas aktywnie, pogoda dopisała. Wrócimy 😊
-    </p>
+        Piękne jezioro za drzwiami, choć najlepsze widoki są z "górnego pokładu". W domku jest bardzo przytulnie i miło. Wyjątkowe miejsce i spokojna okolica. Spędziliśmy ten czas aktywnie, pogoda dopisała. Wrócimy 😊    </p>
 
     <div class="testimonials__author">
         <strong class="testimonials__name">Blue03</strong>
@@ -440,19 +435,15 @@
     </div>
 </article>
 
-
             <!-- Karta 2 -->
-            
-            
-            <article class="testimonials__card">
+                                    <article class="testimonials__card">
     <div class="testimonials__stars">
         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
         ><i class="bi bi-star-fill"></i>
     </div>
 
     <p class="testimonials__text">
-        Piękne miejsce, idealne dla osób lubiących kontakt z naturą. Cisza, spokój i obłędny widok na jezioro. Wspaniali właściciele, którzy dbali, by niczego nam nie brakowało ❤️
-    </p>
+        Piękne miejsce, idealne dla osób lubiących kontakt z naturą. Cisza, spokój i obłędny widok na jezioro. Wspaniali właściciele, którzy dbali, by niczego nam nie brakowało ❤️    </p>
 
     <div class="testimonials__author">
         <strong class="testimonials__name">Delfina</strong>
@@ -460,19 +451,15 @@
     </div>
 </article>
 
-
             <!-- Karta 3 -->
-            
-            
-            <article class="testimonials__card">
+                                    <article class="testimonials__card">
     <div class="testimonials__stars">
         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
         ><i class="bi bi-star-fill"></i>
     </div>
 
     <p class="testimonials__text">
-        Myślałam, że domek na wodzie to taki kaprys, zbędny " bajer". O, jakże się myliłam! Niczym niezakłócony widok na jezioro, z poziomu jeziora, oczarował mnie do głębi! Cudowne doświadczenie. Gospodarz przemiły i pomocny. Miejsce klimatczne i urocze. Serdecznie polecam!
-    </p>
+        Myślałam, że domek na wodzie to taki kaprys, zbędny " bajer". O, jakże się myliłam! Niczym niezakłócony widok na jezioro, z poziomu jeziora, oczarował mnie do głębi! Cudowne doświadczenie. Gospodarz przemiły i pomocny. Miejsce klimatczne i urocze. Serdecznie polecam!    </p>
 
     <div class="testimonials__author">
         <strong class="testimonials__name">Dobrucka</strong>
@@ -480,19 +467,15 @@
     </div>
 </article>
 
-
             <!-- Karta 5 -->
-            
-            
-            <article class="testimonials__card">
+                                    <article class="testimonials__card">
     <div class="testimonials__stars">
         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
         ><i class="bi bi-star-fill"></i>
     </div>
 
     <p class="testimonials__text">
-        Przepiękne miejsce, mnóstwo dobrej energii, dopracowanych detali i aktywności dostępnych na miejscu. Dom sam w sobie bardzo komfortowy, a widok na jezioro o poranku to coś z bajki! Właściciel bardzo miły, dbał i zaglądał czy wszystko jest ok. Absolutnie polecam, wrócę na pewno.
-    </p>
+        Przepiękne miejsce, mnóstwo dobrej energii, dopracowanych detali i aktywności dostępnych na miejscu. Dom sam w sobie bardzo komfortowy, a widok na jezioro o poranku to coś z bajki! Właściciel bardzo miły, dbał i zaglądał czy wszystko jest ok. Absolutnie polecam, wrócę na pewno.    </p>
 
     <div class="testimonials__author">
         <strong class="testimonials__name">Ewa</strong>
@@ -500,26 +483,21 @@
     </div>
 </article>
 
-
             <!-- Karta 4 -->
-            
-            
-            <article class="testimonials__card">
+                                    <article class="testimonials__card">
     <div class="testimonials__stars">
         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
         ><i class="bi bi-star-fill"></i>
     </div>
 
     <p class="testimonials__text">
-        Bardzo klimatyczne miejsce. Domek pięknie urządzony, funkcjonalny. Wspaniałe widoki. Wiele atrakcji: łódki, supy, balia, sauna. Nie da się tu nudzić ;) do tego bardzo pomocny i sympatyczny właściciel :)
-    </p>
+        Bardzo klimatyczne miejsce. Domek pięknie urządzony, funkcjonalny. Wspaniałe widoki. Wiele atrakcji: łódki, supy, balia, sauna. Nie da się tu nudzić ;) do tego bardzo pomocny i sympatyczny właściciel :)    </p>
 
     <div class="testimonials__author">
         <strong class="testimonials__name">Kinga</strong>
         <span class="testimonials__source">Gość z Booking.com</span>
     </div>
 </article>
-
         </div>
 
         <div class="testimonials__controls">
@@ -553,9 +531,7 @@
 
         <div class="faq__list" data-accordion>
             <!-- Pytanie 1 -->
-            
-            
-            <div class="faq__item">
+                                    <div class="faq__item">
     <button class="faq__trigger" type="button" aria-expanded="false">
         <span class="faq__question">W jakich godzinach jest doba hotelowa?</span>
         <i class="bi bi-chevron-down faq__icon"></i>
@@ -565,17 +541,13 @@
             <p class="faq__text">
                 <strong>Pływający domek:</strong> zameldowanie 15:00 - 17:00, wymeldowanie 10:00 - 12:00 <br>
              <strong>Pływająca brda:</strong> zameldowanie 14:00 - 18:00, wymeldowanie 24h<br>
-             <strong>Szklana stodoła:</strong> zameldowanie 15:00 - 18:00, wymeldowanie 08:00 - 11:00
-            </p>
+             <strong>Szklana stodoła:</strong> zameldowanie 15:00 - 18:00, wymeldowanie 08:00 - 11:00            </p>
         </div>
     </div>
 </div>
 
-
             <!-- Pytanie 2 -->
-            
-            
-            <div class="faq__item">
+                                    <div class="faq__item">
     <button class="faq__trigger" type="button" aria-expanded="false">
         <span class="faq__question">Czy można przyjechać ze zwierzęciem?</span>
         <i class="bi bi-chevron-down faq__icon"></i>
@@ -583,17 +555,13 @@
     <div class="faq__collapse">
         <div class="faq__body">
             <p class="faq__text">
-                Z myślą o komforcie i bezpieczeństwie wszystkich gości – w tym osób z alergiami – nasz obiekt nie przyjmuje zwierząt. Liczymy na Państwa wyrozumiałość i serdecznie zapraszamy do rezerwacji.
-            </p>
+                Z myślą o komforcie i bezpieczeństwie wszystkich gości – w tym osób z alergiami – nasz obiekt nie przyjmuje zwierząt. Liczymy na Państwa wyrozumiałość i serdecznie zapraszamy do rezerwacji.            </p>
         </div>
     </div>
 </div>
 
-
             <!-- Pytanie 3 -->
-            
-            
-            <div class="faq__item">
+                                    <div class="faq__item">
     <button class="faq__trigger" type="button" aria-expanded="false">
         <span class="faq__question">Czy na miejscu jest parking?</span>
         <i class="bi bi-chevron-down faq__icon"></i>
@@ -601,17 +569,13 @@
     <div class="faq__collapse">
         <div class="faq__body">
             <p class="faq__text">
-                Tak, zapewniamy bezpłatne, bezpieczne miejsca parkingowe na terenie obiektu.
-            </p>
+                Tak, zapewniamy bezpłatne, bezpieczne miejsca parkingowe na terenie obiektu.            </p>
         </div>
     </div>
 </div>
 
-
             <!-- Pytanie 4 -->
-            
-            
-            <div class="faq__item">
+                                    <div class="faq__item">
     <button class="faq__trigger" type="button" aria-expanded="false">
         <span class="faq__question">Kaucja zwrotna na poczet zniszczeń</span>
         <i class="bi bi-chevron-down faq__icon"></i>
@@ -619,17 +583,13 @@
     <div class="faq__collapse">
         <div class="faq__body">
             <p class="faq__text">
-                Depozyt na poczet zniszczeń w wysokości 500 zł jest wymagany po przyjeździe. Będzie to płatność gotówkowa. Zapłacona kwota powinna zostać zwrócona przy wymeldowaniu. Całość depozytu zostanie zwrócona w gotówce po sprawdzeniu stanu obiektu.
-            </p>
+                Depozyt na poczet zniszczeń w wysokości 500 zł jest wymagany po przyjeździe. Będzie to płatność gotówkowa. Zapłacona kwota powinna zostać zwrócona przy wymeldowaniu. Całość depozytu zostanie zwrócona w gotówce po sprawdzeniu stanu obiektu.            </p>
         </div>
     </div>
 </div>
 
-
             <!-- Pytanie 5 -->
-            
-            
-            <div class="faq__item">
+                                    <div class="faq__item">
     <button class="faq__trigger" type="button" aria-expanded="false">
         <span class="faq__question">Czy sauna i balia są wliczone w cenę pobytu?</span>
         <i class="bi bi-chevron-down faq__icon"></i>
@@ -637,17 +597,13 @@
     <div class="faq__collapse">
         <div class="faq__body">
             <p class="faq__text">
-                Sauna oraz balia to atrakcje dodatkowo płatne, które nie wchodzą w podstawową cenę wynajmu. Szczegółowy cennik tych usług chętnie podamy podczas rezerwacji lub na miejscu.
-            </p>
+                Sauna oraz balia to atrakcje dodatkowo płatne, które nie wchodzą w podstawową cenę wynajmu. Szczegółowy cennik tych usług chętnie podamy podczas rezerwacji lub na miejscu.            </p>
         </div>
     </div>
 </div>
 
-
             <!-- Pytanie 6 -->
-            
-            
-            <div class="faq__item">
+                                    <div class="faq__item">
     <button class="faq__trigger" type="button" aria-expanded="false">
         <span class="faq__question">Jak wygląda rezerwacja i płatność?</span>
         <i class="bi bi-chevron-down faq__icon"></i>
@@ -655,12 +611,10 @@
     <div class="faq__collapse">
         <div class="faq__body">
             <p class="faq__text">
-                Rezerwacji dokonasz przez Booking.com, telefonicznie, mailowo lub przez Facebooka. Wybierając rezerwację bezpośrednią (e-mail/Facebook), otrzymujesz <strong>rabat do 10%</strong> względem cen na Bookingu. Warunki płatności zależą od wybranej opcji.
-            </p>
+                Rezerwacji dokonasz przez Booking.com, telefonicznie, mailowo lub przez Facebooka. Wybierając rezerwację bezpośrednią (e-mail/Facebook), otrzymujesz <strong>rabat do 10%</strong> względem cen na Bookingu. Warunki płatności zależą od wybranej opcji.            </p>
         </div>
     </div>
 </div>
-
         </div>
     </div>
 </section>
@@ -705,14 +659,14 @@
                         <i class="bi bi-geo-alt contact__info-icon"></i>
                         <div class="contact__info-text">
                             <span class="contact__info-label">Adres</span>
-                            <a href="https://maps.app.goo.gl/FbKcWPBCkBjHeSFq9" class="contact__info-value" target="_blank" rel="noopener"
+                            <a href="https://maps.app.goo.gl/Cbjtbjn7HG7f98Mm6" class="contact__info-value" target="_blank" rel="noopener"
                                 >Wczasowa 11, 83-047 Przywidz</a
                             >
                         </div>
                     </div>
                 </div>
 
-                <form class="contact__form" id="contact-form">
+                <form class="contact__form" id="contact-form" action="send.php" method="POST">
                     <div class="contact__form-group">
                         <label for="contact-name" class="contact__form-label">Imię i nazwisko *</label>
                         <input type="text" id="contact-name" name="name" class="contact__form-input" placeholder="Imię i nazwisko" required />
@@ -753,7 +707,7 @@
             <div class="contact__map-wrapper">
                 <iframe
                     class="contact__map-img"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2334.2415235171243!2d18.32413161299706!3d54.19350747243266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd823dd0b4503d%3A0x32122555ebbc4312!2sWczasowa%2011%2C%2083-047%20Przywidz!5e0!3m2!1spl!2spl!4v1791925070013!5m2!1spl!2spl"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2334.381969531503!2d18.323003113907802!3d54.19102052732146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd83866613b573%3A0x4b520d976318f0e7!2zUMWCeXdhasSFY2EgQnJkYQ!5e0!3m2!1spl!2spl!4v1792080392190!5m2!1spl!2spl"
                     allowfullscreen=""
                     loading="lazy"
                     referrerpolicy="strict-origin-when-cross-origin"
@@ -816,6 +770,26 @@
         </div>
     </div>
 </footer>
+
+        <div id="promo-modal" class="modal theme-scheme-1" aria-hidden="true">
+    <div class="modal__overlay"></div>
+    <div class="modal__content">
+        <button class="modal__close" id="close-modal">&times;</button>
+
+        <h3 class="modal__title">Zaplanuj swój pobyt!</h3>
+
+        <div class="modal__body">
+            <p>
+                Omiń prowizje i płać mniej! Zadzwoń, napisz maila lub wiadomość na Facebooku – rezerwując bezpośrednio, otrzymujesz <strong>rabat do 10%</strong>. Ciesz się wypoczynkiem w najlepszej cenie i z elastycznymi warunkami rezerwacji.
+            </p>
+        </div>
+
+        <div class="modal__actions">
+            <a href="#contact-section" class="btn btn--primary js-modal-link">Rezerwacja bezpośrednia</a>
+            <a href="#booking-section" class="btn btn--booking js-modal-link">Rezerwacja przez Booking</a>
+        </div>
+    </div>
+</div>
 
         <script src="./dist/js/main.min.js" defer></script>
         <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
