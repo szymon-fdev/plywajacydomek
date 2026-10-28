@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     exit;
 }
 
-$to = "szymis09@gmail.com"; 
+$to = "plywajacydomek@gmail.com"; 
 
 $host = preg_replace('/^www\./', '', $_SERVER['HTTP_HOST'] ?? 'localhost');
 $from_system = "no-reply@" . $host;
